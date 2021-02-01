@@ -1,0 +1,36 @@
+.footer
+  display flex
+  flex-direction row
+  flex-axis space-between center
+  min-height $footer-height
+  width 100%
+  padding 0 32px
+  box-sizing border-box
+  line-height 0
+  font-family Roboto, 'sans-serif'
+  background-color $white_smoke
+  border 1px solid $gainsboro
+  border-bottom 0
+  +media-query(all, max-width $site_tablet_width)
+    flex-direction column
+    padding 0 16px
+  +media-query(all, max-width $site_mobile_width)
+    padding 0 8px
+
+.text
+  line-height 12px
+  padding 8px 24px 8px 8px
+  color $footer-text-color
+  font-size 12px
+  +media-query(all, max-width $site_tablet_width)
+    order 2
+    padding 0
+    margin 8px
+  +media-query(all, max-width $site_mobile_width)
+    font-size 10px
+.copyright
+  margin-right 16px
+.site
+  margin 0
+
+

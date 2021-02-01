@@ -1,0 +1,86 @@
+.menu
+  width 100%
+  display flex
+  flex-direction column
+  list-style none
+  margin 0
+  padding 0
+  font-family Roboto
+  font-weight 400
+  font-size 14px
+  color rgba(0,0,0,0.87)
+  .menuItemContent
+    color rgba(0,0,0,0.87)
+    transition none
+    &:hover
+    &.active
+      color $white
+      text-decoration none
+      background-image linear-gradient(to right, #3c6b9e .08%, #5494da 100%)
+      .menuItemIcon
+        fill $white
+        color $white
+  &.submenu
+    min-width 320px
+    padding 32px
+    absolute 0 false false 100%
+    z-index 1000
+    display none
+    background-image linear-gradient(to right, rgba(34,70,110,1) 0%, rgba(31,97,170,1) 100%)
+    .menuItemContent
+      color $white
+      &:before
+        content ''
+        absolute 0 false 0 0
+        size 4px 0
+        margin auto
+        background-image linear-gradient(to right, #38a6d6 0%, #74c7eb 100%)
+        color $transparent
+        transition: all 0.5s ease;
+      &:hover
+        background-color rgba(106,152,201,0.2)
+        color #38a6d6
+        &:before
+          height 100%
+
+
+.menuItem
+  width 100%
+  relative false
+  margin 2px 0
+  padding 0
+  line-height 24px
+  &:hover
+    .submenu
+      display block
+
+.menuItemContent
+  padding 11px 16px
+  display flex
+  flex-direction row
+  flex-axis start center
+  font-size 14px
+  text-decoration none
+  &:before
+    content ''
+    absolute 0 false 0 0
+    size 6px 0
+    margin auto
+    background-image linear-gradient(to right, $scooter 0%, $seagull 100%)
+    color rgba(255, 255, 255, 0)
+    transition all $transition-time ease
+  &:hover
+  &.active
+    &:before
+      height 100%
+  &.active
+    &:before
+      background-image none
+      background-color $alizarin_crimson
+
+.menuItemIcon
+  size 24px
+  min-width 24px
+  margin-right 16px
+  fill $steel_blue
+  color $steel_blue

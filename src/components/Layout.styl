@@ -1,0 +1,39 @@
+.wrap
+  width 100%
+  min-width $site_min_width
+  min-height 100%
+  display flex
+  flex-direction column
+  margin 0 auto
+  padding 0
+  box-sizing border-box
+  transition padding $transition-time linear
+  +media-query(all, min-width $site_max_width)
+    padding 0 16px
+.container
+  display flex
+  flex 1
+  flex-direction row
+.content
+  width calc("100% - %s" % $sidebar-width)
+  max-width calc("100% - %s" % $sidebar-width)
+  display flex
+  flex 1
+  flex-direction column
+.page
+  display flex
+  flex 1
+  flex-direction column
+  padding 16px
+  box-sizing border-box
+  font-family Roboto
+  color $text-color
+  transition padding $transition-time linear
+  +media-query(all, min-width $site_max_width)
+    padding-right 0
+
+  h1
+    font-size 36px
+    font-weight 500
+    line-height 1.1
+    margin 10px 0
